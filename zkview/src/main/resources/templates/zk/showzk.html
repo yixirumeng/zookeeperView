@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>showzk</title>
+
+    <link rel="stylesheet" th:href="@{/css/showzk.css}" />
+
+    <script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/showzk.js}"></script>
+    <script th:src="@{/js/formatXML.js}"></script>
+    <script th:inline="javascript">
+        $(document).ready(function(){
+            var bAdmin = [[${admin}]];
+            if(bAdmin != "true"){
+                $(".admin").css("display", "none");
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 id="path" th:text="${path}" onclick="service.path_click(this)">path</h1>                  <a href="http://localhost:8022/zk/">index</a>   <br><br>
+    <hr>
+    <ul th:each="data:${datas}">
+        <li th:text="${data.key}" onclick="service.node_click(this)"></li>
+        <li class="value" th:text="${data.value}"></li>
+        <li>
+            <button class="admin" onclick="service.delete_node(this)">删除</button>
+            <button class="admin" onclick="service.change_node(this)">修改</button>
+            <button onclick="service.fXML(this)" >格式化xml</button>
+        </li>
+    </ul>
+
+    <button onclick="service.path_create(this)">创建新节点</button>
+    <div id="createNode" class="kvWin">
+        <p>创建节点</p>
+        <div class="kvContent">
+            <input type="text" id="pathName" value="" /><br>
+            <textarea id="pathData" cols="30" rows="6"></textarea><br>
+            <input type="button" onclick="service.win_add_node(this)" value="添加" /><input type="button" value="取消" class="closeNodeWnd" />
+        </div>
+    </div>
+    <div id="changeNode" class="kvWin">
+        <p>修改节点</p>
+        <div class="kvContent">
+            <p id="changeDataPath"></p>
+            <textarea name="pathData" id="changeDataValue" cols="30" rows="6"></textarea><br>
+            <input type="button" onclick="service.win_change_node(this)" value="修改" /><input type="button" value="取消" class="closeNodeWnd"/>
+        </div>
+    </div>
+</body>
+</html>

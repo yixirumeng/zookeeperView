@@ -1,0 +1,22 @@
+.folderwnd{
+    width: 450px;
+    height: 300px;
+    background-color: antiquewhite;
+    display: none;
+    position: absolute;
+}
+
+.folderview{
+    margin: 20px 20px 40px;
+    width:400px;
+    height: 230px;
+    border-width: 5px;
+    border-color: aquamarine;
+    border-style: groove;
+    float: left;
+    overflow: hidden;
+}
+
+li:hover{
+    background-color: lightpink;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ZK INDEX</title>
+    <script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/zkindex.js}"></script>
+</head>
+<body>
+    <div>
+        <form action="/zk/showzk" method="post">
+            <label for="zkAddrId">zk地址</label>
+            <input id="zkAddrId" type="text" name="zkAddr" value="127.0.0.1:2181" /><br>
+            <input type="submit" value="查看" />
+        </form>
+    </div>
+
+    <div>
+        <label for="srcZKAddr" >源zk地址</label>
+        <input id="srcZKAddr" type="text" name="srcZK" value="127.0.0.1:2181" /><br>
+        <label for="targetZKAddr">目的zk地址</label>
+        <input id="targetZKAddr" type="text" name="targetZK" value="127.0.0.1:2181" /><br>
+        <label for="zkPathId">zk路径</label>
+        <input id="zkPathId" type="text" name="zkPath" value="/" /><br>
+        <button id="cpZKData">拷贝</button>
+    </div>
+</body>
+</html>

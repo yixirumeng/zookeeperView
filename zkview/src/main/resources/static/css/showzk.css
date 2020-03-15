@@ -1,0 +1,68 @@
+.value{
+    font-weight:bold;
+    color:#ff4c27;
+}
+
+xmp{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Lao UI";
+    color:#ff4c27
+}
+
+.kvWin{
+    width: 400px;
+    height: 300px;
+    background-color: antiquewhite;
+    position: absolute;
+    display: none;
+}
+
+.kvWin p{
+    width: 100%;
+    text-align:center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.kvContent p{
+    width: 100%;
+    text-align: left;
+    font-size:14px;
+}
+
+.kvContent{
+    padding:0px 20px 10px;
+}
+
+.kvContent input[type=text]{
+    color: mediumpurple;
+    width: 100%;
+    font-size: 15px;
+}
+
+.kvContent textarea{
+    color: mediumpurple;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.kvContent input[type=button]{
+    width: 80px;
+    background-color: antiquewhite;
+    float: right;
+    margin-top: 20px;
+}
+
+.kvContent input[type=button]:hover{
+    background-color: coral;
+}
+
+li button{
+    color: cornflowerblue
+}
+
+li button:hover{
+    color: deeppink;
+}

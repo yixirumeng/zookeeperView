@@ -1,0 +1,5 @@
+*.class
+tools/**
+Tools.tar/**
+zkview/.idea/**
+zkview/target/**
